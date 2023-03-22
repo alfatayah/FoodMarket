@@ -1,13 +1,15 @@
 import React from 'react';
-import {
-  StyleSheet,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 
-import { SplashScreen } from './pages';
+import { SignIn, SplashScreen } from './pages';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
   return (
-    <SplashScreen />
+    <NavigationContainer>
+      {/* <SplashScreen /> */}
+      <SignIn/>
+    </NavigationContainer>
   )
 }
 
