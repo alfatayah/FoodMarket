@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Text, View} from 'react-native';
 import {Logo} from '../../assets';
 
-const SplashScreen = () => {
+
+//NOTE: props.navigation itu dapet dari inject component dari funtionn router yg di implement dari stack navigation
+const SplashScreen = ({navigation}) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace("SignIn")
+    }, 2000);
+
+  }, []);
+
   return (
     <View
       style={{
