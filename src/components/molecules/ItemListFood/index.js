@@ -2,19 +2,20 @@ import {StyleSheet, Text, View, Image, useWindowDimensions} from 'react-native';
 import React from 'react';
 import {FoodDummy1} from '../../../assets';
 import Rating from '../Rating';
+import { ScrollView } from 'react-native-gesture-handler';
 
-const ItemListFood = () => {
+const ItemListFood = ({image}) => {
   return (
     <View
       style={{
         flexDirection: 'row',
         backgroundColor: 'white',
-        paddingHorizontal: 25,
+        paddingHorizontal: 24,
         paddingVertical: 8,
         alignItems: 'center',
       }}>
       <Image
-        source={FoodDummy1}
+        source={image}
         style={{
           width: 60,
           height: 60,

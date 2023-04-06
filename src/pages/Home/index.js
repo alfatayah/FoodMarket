@@ -19,8 +19,8 @@ import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 
 const Home = () => {
   return (
-    // <ScrollView >  
-      <View style={styles.page}>
+    <ScrollView >
+     <View style={styles.page}>
         <HomeProfile />
         <View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -37,8 +37,10 @@ const Home = () => {
         <View style={styles.tabContainer}>
           <HomeTabSection />
         </View>
-      </View>
-    // </ScrollView>
+    </View>
+   </ScrollView>
+    
+   
   );
 };
 
@@ -76,6 +78,5 @@ const styles = StyleSheet.create({
   },
   tabContainer: {
     flex: 1,
-    backgroundColor: 'blue',
   },
 });
