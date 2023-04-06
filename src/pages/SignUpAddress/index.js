@@ -1,14 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Header from '../../components/molecules/header';
-import {Gap, Select, TextInput} from '../../components';
+import {Gap, Select, TextInput, Header} from '../../components';
 import Button from '../../components/atoms/Button';
 
 const SignUpAddress = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header
-        title="Adaress"
+        title="Address"
         subtitle={'Make sure it’s valid'}
         onBack={() => console.log('etyst')}
       />

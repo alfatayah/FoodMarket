@@ -1,7 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Header from '../../components/molecules/header';
-import {Gap, TextInput} from '../../components';
+import {Gap, TextInput, Header} from '../../components';
 import Button from '../../components/atoms/Button';
 
 const SignIn = ({navigation}) => {
