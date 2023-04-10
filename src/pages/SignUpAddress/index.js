@@ -2,9 +2,11 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Gap, Select, TextInput, Header} from '../../components';
 import Button from '../../components/atoms/Button';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const SignUpAddress = ({navigation}) => {
   return (
+    <ScrollView>
     <View style={styles.page}>
       <Header
         title="Address"
@@ -23,6 +25,7 @@ const SignUpAddress = ({navigation}) => {
         <Button text={'Sign Up Now'} onPress={()=> navigation.replace("SuccessSignUp")}/>
       </View>
     </View>
+    </ScrollView>
   );
 };
 

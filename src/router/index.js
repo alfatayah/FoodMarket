@@ -1,4 +1,4 @@
-import {SignIn, SignUp, SplashScreen, SignUpAddress, SuccessSignUp, Home, Order, Profile} from '../pages';
+import {SignIn, SignUp, SplashScreen, SignUpAddress, SuccessSignUp, Home, Order, Profile, FoodDetail} from '../pages';
 import {createStackNavigator} from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigator } from '../components';
@@ -25,6 +25,7 @@ const Router = () => {
       <Stack.Screen name="SignUpAddress" component={SignUpAddress} options={{headerShown: false}} />
       <Stack.Screen name="SuccessSignUp" component={SuccessSignUp} options={{headerShown: false}} />
       <Stack.Screen name="MainApp" component={MainApp} options={{headerShown: false}} />
+      <Stack.Screen name="FoodDetail" component={FoodDetail} options={{headerShown: false}} />
 
     </Stack.Navigator>
   );

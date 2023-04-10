@@ -2,9 +2,11 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Gap, TextInput, Header} from '../../components';
 import Button from '../../components/atoms/Button';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const SignUp = ({navigation}) => {
   return (
+    <ScrollView>
     <View style={styles.page}>
       <Header
         title="Sign Up"
@@ -29,6 +31,7 @@ const SignUp = ({navigation}) => {
         <Gap height={12} />
       </View>
     </View>
+    </ScrollView>
   );
 };
 

@@ -7,36 +7,40 @@ import ItemListFood from '../ItemListFood';
 import { FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4, FoodDummy6 } from '../../../assets';
 import Rating from '../Rating';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const NewTaste = () => {
+  const navigation = useNavigation();
   return (
       <View style={{paddingTop: 8}}>
-        <ItemListFood image={FoodDummy1}/>
-        <ItemListFood image={FoodDummy2}/>
-        <ItemListFood image={FoodDummy3}/>
-        <ItemListFood image={FoodDummy4}/>
+        <ItemListFood image={FoodDummy1} onPress={()=> navigation.navigate('FoodDetail')}/>
+        <ItemListFood image={FoodDummy2} onPress={()=> navigation.navigate('FoodDetail')}/>
+        <ItemListFood image={FoodDummy3} onPress={()=> navigation.navigate('FoodDetail')}/>
+        <ItemListFood image={FoodDummy4} onPress={()=> navigation.navigate('FoodDetail')}/>
       </View>
   );
 };
 
 const Popular = () => {
+  const navigation = useNavigation();
   return (
     <View style={{paddingTop: 8}}>
-      <ItemListFood image={FoodDummy4} />
-      <ItemListFood image={FoodDummy3} />
-      <ItemListFood image={FoodDummy2} />
-      <ItemListFood image={FoodDummy1} />
+      <ItemListFood image={FoodDummy4} onPress={()=> navigation.navigate('FoodDetail')} />
+      <ItemListFood image={FoodDummy3} onPress={()=> navigation.navigate('FoodDetail')} />
+      <ItemListFood image={FoodDummy2} onPress={()=> navigation.navigate('FoodDetail')} />
+      <ItemListFood image={FoodDummy1} onPress={()=> navigation.navigate('FoodDetail')} />
     </View>
   );
 };
 
 const Recomended = () => {
+  const navigation = useNavigation();
   return (
     <View style={{paddingTop: 8}}>
-      <ItemListFood image={FoodDummy3} />
-      <ItemListFood image={FoodDummy4} />
-      <ItemListFood image={FoodDummy1} />
-      <ItemListFood image={FoodDummy2} />
+      <ItemListFood image={FoodDummy3} onPress={()=> navigation.navigate('FoodDetail')} />
+      <ItemListFood image={FoodDummy4} onPress={()=> navigation.navigate('FoodDetail')} />
+      <ItemListFood image={FoodDummy1} onPress={()=> navigation.navigate('FoodDetail')} />
+      <ItemListFood image={FoodDummy2} onPress={()=> navigation.navigate('FoodDetail')} />
     </View>
   );
 };
