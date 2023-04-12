@@ -4,7 +4,7 @@ import {FoodDummy1} from '../../../assets';
 import Rating from '../Rating';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const ItemListFood = ({image, onPress}) => {
+const ItemListFood = ({image, onPress , items, rating}) => {
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
     <View
@@ -23,7 +23,10 @@ const ItemListFood = ({image, onPress}) => {
           IDR 289.000
         </Text>
       </View>
-      <Rating />
+      {items && !rating && <Text style={styles.items}>{items} items</Text>}
+      {rating && !items &&  <Rating />}
+
+     
     </View>
     </TouchableOpacity>
   );
@@ -35,7 +38,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    paddingHorizontal: 24,
     paddingVertical: 8,
     alignItems: 'center',
   },
@@ -56,5 +58,15 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Regular',
     fontSize: 13,
     color: '#8D92A3',
+  },
+  items:{
+    fontSize: 13,
+    fontFamily: 'Poppins-Regular',
+    color: '#8D92A3',
+
+  },
+  rating:{
+
   }
+
 });

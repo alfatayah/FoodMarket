@@ -5,7 +5,7 @@ import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {Counter, Rating} from '../../components';
 import {Button} from '../../components';
 
-const FoodDetail = () => {
+const FoodDetail = ({navigation}) => {
   return (
     <ScrollView>
       <View style={styles.page}>
@@ -38,7 +38,7 @@ const FoodDetail = () => {
               <Text style={styles.priceTotal}>Idr 129.000</Text>
             </View>
             <View style={styles.button}>
-              <Button text="Order Now" />
+              <Button text="Order Now" onPress={()=> navigation.navigate('OrderSummary')} />
             </View>
           </View>
         </View>

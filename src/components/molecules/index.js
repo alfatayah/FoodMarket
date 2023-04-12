@@ -5,5 +5,7 @@ import HomeTabSection from "./HomeTabSection";
 import Rating from "./Rating";
 import HomeProfile from "./HomeProfile";
 import Counter from "./Counter";
+import ItemListFood from "./ItemListFood";
+import ItemValue from "./ItemValue";
 
-export {Header, BottomNavigator, FoodCard, HomeTabSection, Rating, HomeProfile, Counter};
+export {Header, BottomNavigator, FoodCard, HomeTabSection, Rating, HomeProfile, Counter, ItemListFood, ItemValue};
