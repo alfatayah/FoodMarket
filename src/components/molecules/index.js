@@ -7,5 +7,17 @@ import HomeProfile from "./HomeProfile";
 import Counter from "./Counter";
 import ItemListFood from "./ItemListFood";
 import ItemValue from "./ItemValue";
+import EmptyOrder from "./EmptyOrder";
 
-export {Header, BottomNavigator, FoodCard, HomeTabSection, Rating, HomeProfile, Counter, ItemListFood, ItemValue};
+export {
+  Header,
+  BottomNavigator,
+  FoodCard,
+  HomeTabSection,
+  Rating,
+  HomeProfile,
+  Counter,
+  ItemListFood,
+  ItemValue,
+  EmptyOrder,
+};
