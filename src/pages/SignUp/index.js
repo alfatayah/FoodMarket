@@ -16,7 +16,7 @@ const SignUp = ({navigation}) => {
       <View style={styles.container}>
         <View style={styles.photo}>
           <View style={styles.borderPhoto}>
-            <View style={StyleSheet.photoContainer}>
+            <View style={styles.photoContainer}>
               <Text style={styles.addPhoto}>Add Photo</Text>
             </View>
           </View>
@@ -66,9 +66,11 @@ const styles = StyleSheet.create({
   },
   photoContainer: {
     width: 90,
-    fontFamily: 'Poppins-Light',
-    color: '#8D92A3',
-    textAlign: 'center',
+    height: 90,
+    borderRadius: 90,
+    backgroundColor: '#F0F0F0',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   addPhoto: {
     fontSize: 14,
