@@ -2,24 +2,29 @@ import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {Gap, TextInput, Header} from '../../components';
 import Button from '../../components/atoms/Button';
+import { useForm } from '../../utils';
 
 const SignIn = ({navigation}) => {
-  const [email, setEmail] = useState('');
-  const [password , setPassword] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password , setPassword] = useState('');
+  const [form, setForm] = useForm({
+    email: '',
+    password: '',
+  })
+
   const onSubmit = () => {
-    console.log("email: ", email);
-    console.log('password: ', password);
+    console.log("form : ", form);
   }
 
   return (
     <View style={styles.page}>
       <Header title={"Sign In"} subtitle={"Find your best ever meal"} />
       <View style={styles.container}>
-        <TextInput label={"Email Address"} placeholder={"Type your email"} value={email} onChangeText={(value)=> setEmail(value)}/>
+        <TextInput label={"Email Address"} placeholder={"Type your email"} onChangeText={(value)=> setForm('email' , value)}/>
         <Gap height={16} />
-        <TextInput  label={"Password"} placeholder={"Type your password"} value={password} onChangeText={(value) => setPassword(value)} secureTextEntry />
+        <TextInput  label={"Password"} placeholder={"Type your password"}  onChangeText={(value) => setForm('password',value)} secureTextEntry />
         <Gap height={24} />
-        <Button text={"Sign In"} />
+        <Button text={"Sign In"} onPress={onSubmit} />
         <Gap height={12} />
         <Button  text={"Create New Account"}  color="#8D92A3" textColor="white" onPress={() => navigation.navigate("SignUp")}/>
       </View>
